@@ -19,7 +19,7 @@ input.addEventListener('input', debounce(countrySearch, DEBOUNCE_DELAY));
 function countrySearch() {
   const countryName = input.value.trim();
 
-  if (!countryName) {
+  if (countryName === '') {
     countryList.innerHTML = ``;
     countryInfo.innerHTML = ``;
     return;
@@ -38,7 +38,7 @@ function showCountryInfo(countries) {
     countryList.innerHTML = ``;
     const fetchedData = countries
       .map(country => {
-        return `<p><img src="${country.flags.svg}" width="35px"></p>
+        return `<p><img src="${country.flags.svg}" width="50px"></p>
         <p style="font-size: 28px"><b>${country.name}</b></p>
           <p><b>Capital: </b>${country.capital}</p>
           <p><b>Population: </b>${country.population}</p>
