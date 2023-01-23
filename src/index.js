@@ -50,7 +50,7 @@ function showCountryInfo(countries) {
     countryInfo.innerHTML = fetchedData;
   }
 
-  if (countries.length > 2) {
+  if (countries.length > 1) {
     countryInfo.innerHTML = ``;
     const fetchedData = countries
       .map(country => {
