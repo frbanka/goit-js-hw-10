@@ -62,6 +62,6 @@ function showCountryInfo(countries) {
   if (countries.length > 10) {
     countryList.innerHTML = ``;
     countryInfo.innerHTML = ``;
-    Notiflix.info('Too many matches found. Please enter a more specific name.');
+    Notify.info('Too many matches found. Please enter a more specific name.');
   }
 }
